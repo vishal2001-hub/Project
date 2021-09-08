@@ -4,8 +4,6 @@ const bodyParser = require("body-parser");
 
 const request = require("request");
 
-require("dotenv").config();
-
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 const app = express();
@@ -54,8 +52,6 @@ app.post('/', (req, res) => {
       }
 
 
-
-
     };
     run();
   })
@@ -65,6 +61,6 @@ app.post("/fail" , function(req , res){
   res.redirect("/");
 })
 
-app.listen(process.env.POST || 200, function(){
-    console.log("YUP IT IS WORKING ON PORT : 200");
+app.listen(process.env.POST || 5000, function(){
+    console.log("YUP IT IS WORKING ON PORT : 5000");
 })
